@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacaranda Garden Restaurant — Kimana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-dm antialiased overflow-x-hidden">
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="logo-text text-2xl font-playfair text-white tracking-wide">
+        Jacaranda
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-dm text-white/80">
+        <li><a href="#about" class="nav-link hover:text-white transition">About</a></li>
+        <li><a href="#menu" class="nav-link hover:text-white transition">Menu</a></li>
+        <li><a href="#gallery" class="nav-link hover:text-white transition">Gallery</a></li>
+        <li><a href="#reserve" class="nav-link hover:text-white transition">Reserve</a></li>
+        <li>
+          <a href="#reserve" class="btn-primary px-5 py-2 rounded-full text-sm font-medium">
+            Book a Table
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button id="menuToggle" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+        <span id="hamburger-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </span>
+        <span id="close-icon" class="hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </span>
+      </button>
+    </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden bg-black/95 backdrop-blur-md border-t border-white/10">
+      <ul class="flex flex-col px-6 py-4 gap-4 text-white text-sm">
+        <li><a href="#about" class="mobile-nav-link block py-2">About</a></li>
+        <li><a href="#menu" class="mobile-nav-link block py-2">Menu</a></li>
+        <li><a href="#gallery" class="mobile-nav-link block py-2">Gallery</a></li>
+        <li><a href="#reserve" class="mobile-nav-link block py-2">Reserve</a></li>
+        <li>
+          <a href="#reserve" class="btn-primary block text-center py-3 rounded-full font-medium mobile-nav-link mt-2">
+            Book a Table
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section id="home" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <!-- Floating Petals -->
+    <div class="petal petal-1"></div>
+    <div class="petal petal-2"></div>
+    <div class="petal petal-3"></div>
+    <div class="petal petal-4"></div>
+    <div class="petal petal-5"></div>
+
+    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <p class="badge-pill mb-6 inline-block">📍 Kimana, Kajiado County</p>
+      <h1 class="font-playfair text-5xl md:text-8xl text-white leading-tight mb-6">
+        Where the<br/>
+        <em class="text-accent-red">Garden</em> Sets<br/>
+        Your Table
+      </h1>
+      <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        Fresh flavours, open skies, and warm Kenyan hospitality — 
+        available every hour of every day at Jacaranda Garden Restaurant.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#reserve" class="btn-primary px-8 py-4 rounded-full text-base font-medium">
+          Reserve Your Spot
+        </a>
+        <a href="#menu" class="btn-ghost px-8 py-4 rounded-full text-base font-medium">
+          Explore Menu
+        </a>
+      </div>
+
+      <!-- 24/7 Badge -->
+      <div class="open-badge mt-14 inline-flex items-center gap-3">
+        <span class="pulse-dot"></span>
+        <span class="text-white/90 text-sm font-medium tracking-wide">OPEN 24 HOURS · 7 DAYS A WEEK</span>
+      </div>
+    </div>
+
+    <!-- Scroll Cue -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-cue">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════ CHECKER DIVIDER ══════════════ -->
+  <div class="checker-divider"></div>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section id="about" class="section-pad bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- Text -->
+        <div class="reveal-left">
+          <span class="section-tag">Our Story</span>
+          <h2 class="font-playfair text-4xl md:text-5xl text-deep-blue mt-3 mb-6 leading-snug">
+            A Garden Retreat<br/>
+            <em>Beneath the Kilimanjaro Sky</em>
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-5">
+            Nestled at the foot of Mount Kilimanjaro in Kimana, Jacaranda Garden Restaurant 
+            is where the wilderness meets warmth. Blooming jacaranda trees frame every meal, 
+            and the crisp highland air adds a flavour no kitchen can replicate.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            We serve an ever-changing menu of local and continental dishes, brewed Kenyan 
+            teas, and char-grilled specialities — around the clock, because great hunger 
+            has no schedule.
+          </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div class="stat-card text-center">
+              <p class="font-playfair text-3xl text-accent-red">24/7</p>
+              <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Always Open</p>
+            </div>
+            <div class="stat-card text-center">
+              <p class="font-playfair text-3xl text-deep-blue">50+</p>
+              <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Menu Items</p>
+            </div>
+            <div class="stat-card text-center">
+              <p class="font-playfair text-3xl text-accent-red">200</p>
+              <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Garden Seats</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garden Image Collage -->
+        <div class="reveal-right relative">
+          <div class="garden-frame">
+            <div class="garden-img-main checker-card-bg">
+              <div class="garden-placeholder flex items-center justify-center">
+                <div class="text-center text-white/80">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                  </svg>
+                  <p class="text-sm font-dm tracking-wide">Garden Atmosphere</p>
+                </div>
+              </div>
+            </div>
+            <div class="garden-img-badge">
+              <span class="font-playfair italic text-white text-lg">Est. in Kimana</span>
+            </div>
+          </div>
+          <!-- Floating leaf decorations -->
+          <div class="leaf-deco leaf-1">🌿</div>
+          <div class="leaf-deco leaf-2">🌸</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FEATURES STRIP ══════════════ -->
+  <section class="features-strip py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="feature-pill text-center">
+          <div class="feature-icon mx-auto mb-3">🌿</div>
+          <p class="font-medium text-white text-sm">Garden Dining</p>
+          <p class="text-white/60 text-xs mt-1">Open-air tables under jacaranda canopy</p>
+        </div>
+        <div class="feature-pill text-center">
+          <div class="feature-icon mx-auto mb-3">🕐</div>
+          <p class="font-medium text-white text-sm">24/7 Service</p>
+          <p class="text-white/60 text-xs mt-1">Breakfast, lunch, dinner & midnight bites</p>
+        </div>
+        <div class="feature-pill text-center">
+          <div class="feature-icon mx-auto mb-3">🍽️</div>
+          <p class="font-medium text-white text-sm">Local & Continental</p>
+          <p class="text-white/60 text-xs mt-1">Kenyan classics & international favourites</p>
+        </div>
+        <div class="feature-pill text-center">
+          <div class="feature-icon mx-auto mb-3">🐘</div>
+          <p class="font-medium text-white text-sm">Wildlife Views</p>
+          <p class="text-white/60 text-xs mt-1">Dine with Amboseli on the horizon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CHECKER DIVIDER ══════════════ -->
+  <div class="checker-divider checker-divider--flipped"></div>
+
+  <!-- ══════════════ MENU ══════════════ -->
+  <section id="menu" class="section-pad bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14 reveal-up">
+        <span class="section-tag">What We Serve</span>
+        <h2 class="font-playfair text-4xl md:text-5xl text-deep-blue mt-3 leading-snug">
+          A Menu That Tells<br/><em>Kenya's Story</em>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Category 1 -->
+        <div class="menu-category-card reveal-up" style="animation-delay: 0.1s">
+          <div class="menu-cat-header bg-accent-red">
+            <span class="text-3xl">🌅</span>
+            <h3 class="font-playfair text-xl text-white mt-2">Breakfast & Brunch</h3>
+            <p class="text-white/70 text-xs mt-1">Available 24/7</p>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span>Kenyan Chai & Mandazi</span>
+              <span class="price">KES 250</span>
+            </li>
+            <li class="menu-item">
+              <span>Full English Garden Breakfast</span>
+              <span class="price">KES 850</span>
+            </li>
+            <li class="menu-item">
+              <span>Avocado Toast & Egg</span>
+              <span class="price">KES 650</span>
+            </li>
+            <li class="menu-item">
+              <span>Uji wa Mahindi</span>
+              <span class="price">KES 200</span>
+            </li>
+            <li class="menu-item">
+              <span>Fruit Platter, Local Varieties</span>
+              <span class="price">KES 400</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="menu-category-card reveal-up featured-menu" style="animation-delay: 0.2s">
+          <div class="menu-cat-header bg-deep-blue">
+            <span class="text-3xl">🔥</span>
+            <h3 class="font-playfair text-xl text-white mt-2">Grills & Mains</h3>
+            <p class="text-white/70 text-xs mt-1">Chef's Specialities</p>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span>Nyama Choma (500g)</span>
+              <span class="price">KES 1,400</span>
+            </li>
+            <li class="menu-item">
+              <span>Tilapia Whole Grilled</span>
+              <span class="price">KES 1,100</span>
+            </li>
+            <li class="menu-item">
+              <span>Chicken Quarter + Kachumbari</span>
+              <span class="price">KES 950</span>
+            </li>
+            <li class="menu-item">
+              <span>Ugali & Sukuma Wiki</span>
+              <span class="price">KES 350</span>
+            </li>
+            <li class="menu-item">
+              <span>Pilau ya Nyama</span>
+              <span class="price">KES 750</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="menu-category-card reveal-up" style="animation-delay: 0.3s">
+          <div class="menu-cat-header bg-accent-green">
+            <span class="text-3xl">🧃</span>
+            <h3 class="font-playfair text-xl text-white mt-2">Drinks & Desserts</h3>
+            <p class="text-white/70 text-xs mt-1">Sweet Endings</p>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span>Dawa Cocktail</span>
+              <span class="price">KES 600</span>
+            </li>
+            <li class="menu-item">
+              <span>Fresh Passion Juice</span>
+              <span class="price">KES 250</span>
+            </li>
+            <li class="menu-item">
+              <span>Kenyan Coffee (French Press)</span>
+              <span class="price">KES 350</span>
+            </li>
+            <li class="menu-item">
+              <span>Baobab Ice Cream</span>
+              <span class="price">KES 450</span>
+            </li>
+            <li class="menu-item">
+              <span>Coconut Mahamri</span>
+              <span class="price">KES 180</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-center text-gray-400 text-sm mt-8">* Menu subject to seasonal availability. Full menu available in-restaurant.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════ GALLERY ══════════════ -->
+  <section id="gallery" class="section-pad checker-section-bg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14 reveal-up">
+        <span class="section-tag section-tag--light">The Atmosphere</span>
+        <h2 class="font-playfair text-4xl md:text-5xl text-white mt-3">
+          Life at Jacaranda
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="gallery-tile tile-tall checker-card-bg flex items-center justify-center">
+          <div class="gallery-label">Garden Tables</div>
+        </div>
+        <div class="gallery-tile checker-card-bg flex items-center justify-center">
+          <div class="gallery-label">Sunrise Breakfast</div>
+        </div>
+        <div class="gallery-tile checker-card-bg flex items-center justify-center row-span-2 hidden md:flex">
+          <div class="gallery-label">Kilimanjaro View</div>
+        </div>
+        <div class="gallery-tile checker-card-bg flex items-center justify-center">
+          <div class="gallery-label">Night Dining</div>
+        </div>
+        <div class="gallery-tile checker-card-bg flex items-center justify-center">
+          <div class="gallery-label">Nyama Choma</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ RESERVATION ══════════════ -->
+  <section id="reserve" class="section-pad bg-cream">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Info Panel -->
+        <div class="reveal-left">
+          <span class="section-tag">Make a Reservation</span>
+          <h2 class="font-playfair text-4xl md:text-5xl text-deep-blue mt-3 mb-6 leading-snug">
+            We're Ready<br/><em>When You Are</em>
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Fill the form and we'll confirm via WhatsApp instantly. 
+            Whether it's 2am or 2pm — a table in the garden awaits.
+          </p>
+
+          <div class="space-y-5">
+            <div class="contact-row">
+              <span class="contact-icon">📍</span>
+              <div>
+                <p class="font-medium text-deep-blue text-sm">Location</p>
+                <p class="text-gray-500 text-sm">Kimana, Kajiado County, Kenya</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">📞</span>
+              <div>
+                <p class="font-medium text-deep-blue text-sm">Phone / WhatsApp</p>
+                <p class="text-gray-500 text-sm">+254 700 000 000</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">🕐</span>
+              <div>
+                <p class="font-medium text-deep-blue text-sm">Hours</p>
+                <p class="text-gray-500 text-sm">Open 24 hours — 365 days a year</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reservation Form -->
+        <div class="reservation-form-card reveal-right">
+          <form id="reservationForm" novalidate>
+            <div class="form-group">
+              <label for="guestName" class="form-label">Your Name</label>
+              <input
+                type="text"
+                id="guestName"
+                name="guestName"
+                class="form-input"
+                placeholder="e.g. Amina Waweru"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="guestPhone" class="form-label">WhatsApp Number</label>
+              <input
+                type="tel"
+                id="guestPhone"
+                name="guestPhone"
+                class="form-input"
+                placeholder="+254 7XX XXX XXX"
+                required
+              />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group">
+                <label for="reserveDate" class="form-label">Date</label>
+                <input
+                  type="date"
+                  id="reserveDate"
+                  name="reserveDate"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="reserveTime" class="form-label">Time</label>
+                <input
+                  type="time"
+                  id="reserveTime"
+                  name="reserveTime"
+                  class="form-input"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="guestCount" class="form-label">Number of Guests</label>
+              <select id="guestCount" name="guestCount" class="form-input" required>
+                <option value="">Select guests...</option>
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3-4">3–4 guests</option>
+                <option value="5-8">5–8 guests</option>
+                <option value="9+">9+ guests (group booking)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="specialRequest" class="form-label">Special Requests <span class="text-gray-400 font-normal">(optional)</span></label>
+              <textarea
+                id="specialRequest"
+                name="specialRequest"
+                class="form-input"
+                rows="3"
+                placeholder="Dietary needs, occasion details, preferred seating..."
+              ></textarea>
+            </div>
+
+            <div id="formStatus" class="form-status hidden"></div>
+
+            <div class="flex flex-col sm:flex-row gap-3 mt-6">
+              <button type="submit" id="submitBtn" class="btn-primary flex-1 py-4 rounded-xl font-medium text-base">
+                <span id="submitText">Confirm Reservation</span>
+                <span id="submitSpinner" class="hidden ml-2">⏳</span>
+              </button>
+              <button type="button" id="whatsappBtn" class="btn-whatsapp flex-1 py-4 rounded-xl font-medium text-base">
+                💬 Book via WhatsApp
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer-bg py-12 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+        <!-- Brand -->
+        <div>
+          <h3 class="font-playfair text-2xl text-white mb-3">Jacaranda Garden</h3>
+          <p class="text-white/50 text-sm leading-relaxed">
+            Where every table feels like a clearing in a blooming garden. 
+            Kimana's finest open-air restaurant, open around the clock.
+          </p>
+          <div class="flex gap-4 mt-5">
+            <a href="#" class="social-pill">FB</a>
+            <a href="#" class="social-pill">IG</a>
+            <a href="#" class="social-pill">WA</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-medium text-sm uppercase tracking-widest mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#menu" class="footer-link">Our Menu</a></li>
+            <li><a href="#gallery" class="footer-link">Gallery</a></li>
+            <li><a href="#reserve" class="footer-link">Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-medium text-sm uppercase tracking-widest mb-4">Find Us</h4>
+          <p class="text-white/50 text-sm mb-2">Kimana, Kajiado County</p>
+          <p class="text-white/50 text-sm mb-2">Near Kimana Sanctuary Gate</p>
+          <p class="text-white/50 text-sm mb-4">Open: 24 hrs / 7 days</p>
+          <a href="tel:+254700000000" class="text-accent-red text-sm hover:underline">+254 700 000 000</a>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-white/30 text-xs">
+          © 2024 Jacaranda Garden Restaurant. All rights reserved.
+        </p>
+        <p class="text-white/40 text-xs">
+          Digital Experience by 
+          <a href="#" class="text-accent-red hover:text-red-400 transition font-medium">Safar Digital Agency</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
